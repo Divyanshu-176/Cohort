@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <input type='text' placeholder='type here'></input>  
+  <button onclick='addTodo()'>Add</button>
+</body>
+
+<script>
+  ctr=1;
+  
+  function addTodo(){
+    const value= document.querySelector('input').value;
+
+    const divel=document.createElement('body');
+    divel.setAttribute('id',ctr);
+    divel.innerHTML="<div>"+ctr+ '. ' +value +' <button onclick="deleteTodo('+ctr+')"> Delete</button></div>';
+    document.querySelector('body').appendChild(divel); 
+    ctr++
+  }
+
+
+
+  function deleteTodo(i){
+    const elem=document.getElementById(i);
+    elem.parentNode.removeChild(elem);
+  }
+ 
+
+
+  
+</script>
+</html>
