@@ -1,0 +1,59 @@
+<html>
+
+<body>
+  <input type='text' placeholder="type here"></input>
+  <button onclick='addTodo()'>Add</button>
+  <button onclick='deleteLastEl()'>Delete last element</button>
+  <button onclick='deleteFirstEl()'>Delete first element</button>
+  <div id='todo'></div>
+</body>
+
+
+
+
+<script>
+  let todos = []; //state variable (array)
+
+  //add a Todo
+  function addTodo() {
+    todos.push({
+      detail: document.querySelector('input').value //push this object into state var
+    })
+    render(); //call this to display
+  }
+
+
+  function deleteLastEl() {
+    todos.pop();
+    render();
+  }
+
+
+  function deleteFirstEl() {
+    todos.shift();
+    render();
+  }
+
+
+  function createComp(todo) {
+    const divEl = document.createElement('div');
+    const spanEl = document.createElement('span');
+    spanEl.innerHTML = todo.detail;
+
+    divEl.append(spanEl);
+    return divEl;
+
+  }
+
+  function render() {
+    document.querySelector('#todo').innerHTML='';
+    for (let i = 0; i < todos.length; i++) {
+      const elem = createComp(todos[i]);
+      document.querySelector('#todo').appendChild(elem);
+    }
+
+  }
+
+</script>
+
+</html>
