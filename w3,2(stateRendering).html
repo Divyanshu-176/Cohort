@@ -35,10 +35,10 @@
   }
 
 
-  function createComp(todo) {
+  function createComp(todo,i) {
     const divEl = document.createElement('div');
     const spanEl = document.createElement('span');
-    spanEl.innerHTML = todo.detail;
+    spanEl.innerHTML = i+1 +'. '+todo.detail;
 
     divEl.append(spanEl);
     return divEl;
@@ -48,7 +48,7 @@
   function render() {
     document.querySelector('#todo').innerHTML='';
     for (let i = 0; i < todos.length; i++) {
-      const elem = createComp(todos[i]);
+      const elem = createComp(todos[i],i);
       document.querySelector('#todo').appendChild(elem);
     }
 
