@@ -37,12 +37,25 @@
 
   function createComp(todo,i) {
     const divEl = document.createElement('div');
+    //divEl.setAttribute('id',`${i}+1`);
+    
     const spanEl = document.createElement('span');
+    const buttonEl=document.createElement('button');
     spanEl.innerHTML = i+1 +'. '+todo.detail;
+    buttonEl.innerHTML='Delete'
+
+    buttonEl.setAttribute('onclick',`deleteTodo(${i})`)
 
     divEl.append(spanEl);
+    divEl.append(buttonEl);
     return divEl;
+  }
 
+
+  function deleteTodo(i){
+    const ind=todos.indexOf(todos[i]);
+    todos.splice(ind,1);
+    render();
   }
 
   function render() {
