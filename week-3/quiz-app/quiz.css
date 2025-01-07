@@ -1,0 +1,83 @@
+/* quiz.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Add this to quiz.css */
+.scoreBox {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.quiz-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+#quiz-ques h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options {
+    margin-top: 15px;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.options label {
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.options label:hover {
+    color: #007BFF;
+}
+
+.options input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#submit-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #0056b3;
+}
+
+#submit-button:active {
+    transform: scale(0.98);
+}
