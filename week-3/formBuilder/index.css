@@ -1,0 +1,110 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    .formContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .builder, .preview {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 45%; /* Adjusts width to fit side-by-side */
+    }
+
+    .builder h1, .preview h1 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .fieldType, .fieldLabel {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    select, input[type="text"] {
+        width: 60%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .previewForm {
+        border: 1px dashed #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f7f7f7;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ensures label and input are side-by-side */
+    .previewForm div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .previewForm div label {
+        width: 30%; /* Adjust label width */
+        text-align: right;
+    }
+
+    .previewForm div input {
+        width: 70%; /* Adjust input width */
+        padding: 5px;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+        .formContainer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .builder, .preview {
+            width: 90%; /* Full width on small screens */
+        }
+    }
