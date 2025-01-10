@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.toDo,
+.inProgress,
+.underReview,
+.finished {
+  flex: 1;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+.toDo h2,
+.inProgress h2,
+.underReview h2,
+.finished h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+select {
+  appearance: none;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 3px solid #ddd;
+}
+
+.card h2.cardTitle {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #333;
+  border: none;
+  outline: none;
+}
+
+.card h3.cardDes {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  border: none;
+  outline: none;
+  font-weight: lighter;
+}
+
+.card select {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  width: 70px;
+  background: #8a8a8a;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+#highImp {
+  color: #fff;
+  background-color: #f44336;
+}
+
+#medImp {
+  color: #fff;
+  background-color: #ff9800;
+}
+
+#lowImp {
+  color: #fff;
+  background-color: #4caf50;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(90deg, #444, #000);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+button:hover {
+  background: linear-gradient(90deg, #666, #222);
+}
+
+
+button .plus svg {
+  width: 20px;
+  height: 20px;
+  justify-content: right;
+}
