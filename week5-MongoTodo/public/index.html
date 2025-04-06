@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week5- Todo app</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="auth-container">
+        <div id="signup-form">
+            <h1>Signup</h1>
+            <p>Email:</p>
+            <input type="text" id="signup-email" placeholder="Type email here">
+
+            <p>Password:</p>
+            <input type="text" id="signup-password" placeholder="Type password here">
+
+            <p>Username:</p>
+            <input type="text" id="signup-name" placeholder="Type username here">
+
+            <button id="signup-btn">Sign Up</button>
+            <p>Already have an account? <button id="show-signin">Sign In</button></p>
+        </div>
+
+
+        <div id="signin-form">
+            <h1>Signin</h1>
+            <p>Email:</p>
+            <input type="text" id="signin-email" placeholder="Type email here">
+
+            <p>Password:</p>
+            <input type="text" id="signin-password" placeholder="Type password here">
+
+        
+            <button id="signin-btn">Sign In</button>
+            <p>Don't have an account? <button id="show-signup">Sign Up</button></p>
+        </div>
+    </div>
+
+
+    <div id="todo-page" style="display:none;">
+        <h4>Your Todos</h4>
+        <input type="text" id="new-todo" placeholder="Enter new Todo">
+        <button id="add-todo-btn">Add Todo</button>
+        <ul id="todo-list"></ul>        
+    </div>
+</body>
+</html>

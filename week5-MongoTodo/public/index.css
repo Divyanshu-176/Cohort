@@ -1,0 +1,173 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1d1d3a, #131328);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* AUTH CONTAINER */
+#auth-container {
+    background-color: #2d2d55;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+#auth-container h1 {
+    text-align: center;
+    color: #bf82f1;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#auth-container p {
+    margin: 10px 0 5px;
+    color: #c0a8f1;
+}
+
+#auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4b4b7a;
+    color: white;
+}
+
+#auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8c52ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#auth-container button:hover {
+    background-color: #732dff;
+}
+
+#auth-container #show-signin,
+#auth-container #show-signup {
+    background: none;
+    border: none;
+    color: #ffd700;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* HIDE SIGNIN INITIALLY */
+#signin-form {
+    display: none;
+}
+
+/* TODO PAGE */
+#todo-page {
+    background-color: #1d1d3a;
+    padding: 40px;
+    border-radius: 16px;
+    width: 400px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#todo-page h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #bf82f1;
+}
+
+#new-todo {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: #2d2d55;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#add-todo-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #8c52ff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#add-todo-btn:hover {
+    background-color: #732dff;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#todo-list li {
+    background-color: #2d2d55;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    gap: 10px;
+}
+
+#todo-list input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#todo-list span {
+    flex-grow: 1;
+    text-align: left;
+    word-break: break-word;
+}
+
+#todo-list button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editBtn {
+    background-color: #ffaa00;
+    color: black;
+}
+
+.deleteBtn {
+    background-color: #ff4d4d;
+    color: white;
+}
+body > div:not(#todo-page):first-child {
+    display: none;
+}
